@@ -1,0 +1,26 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "description": "CRUD API for a blogging website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ossiggy/Blog-API.git"
+  },
+  "author": "ossiggy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ossiggy/Blog-API/issues"
+  },
+  "homepage": "https://github.com/ossiggy/Blog-API#readme",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "parser": "^0.1.4",
+    "uuid": "^3.1.0"
+  }
+}
