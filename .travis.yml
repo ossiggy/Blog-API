@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: qc2AGrKVCjA7MsvyQ+drqGdV3uinicqMXnrjThgfZYGkkklBqeRbwol+BebYk4UryOoGZhRFepHrrFnTPAYo4bABboHTM+0oXnmhCJjpKNKxnazI8/lG4Kpqy5NqT/MvjluR1/l/3VF0/V/JN45QFv2je+EjE5ECdyHB8IG8s58QzJMwAcXzG2w0MDHPV5NxXMyiHHGiMmBPVdu1WMbuAuFKwNd6m1nwy3nmaP92mH4WVPioRqeSLLVAASQ94JYZWIs1YTjQJd5n24pUEWxwJ5uBuYHWGvDV0pZka4vy1QwabQ+Ft93CzM09ja05e9cN94P9Fjcd29IxxtgsSvqn2+fFingLO8Y6pnV/BLE1U+tPMLpmhBGFYYevVOUVx8dCk08Yp7JsQD1ckbRszjBEyLyQX5AF+H/12I6Ozaep3KF/TJSPS7nluMuyo0uF032GlWyXuDUB3tIMNUkrFc7g9sGD5g8qC+MRsldY5XNTybtB7JEo8DnXb2cPzh68k/qWaJWSdXyHsBEK9z0dc5M3mtv2yi/OY2HfErl3cscVFPuDyxVyCQEJmuWXe64ikYcw/G3AnQ9D9lvXi2jbA9v6HEww4S6mZDtOFH/K3ZZQQA5X8QzqGDOrhVSErDfc9CvTlzXtsRYEfjRsSu+9v5EJ/i8isvkfGkUHD2O0hFvbUL0=
+  app: peaceful-fjord-68825
+  on:
+    repo: ossiggy/Blog-API
