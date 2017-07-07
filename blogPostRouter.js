@@ -10,7 +10,7 @@ BlogPosts.create('My First Post', 'This is my first post', 'Ossiggy', 'January 1
 BlogPosts.create('How I took over the world', 'It was simple, really.', 'Ossiggy', 'Januray 16th, 2020')
 BlogPosts.create('How I then took over the known universe', 'It was even easier', 'Ossiggy', 'January 16th, 2025')
 
-router.get('/', (req, res) =>{
+router.get('/', (req, res) => {
     res.json(BlogPosts.get())
 })
 
@@ -34,8 +34,8 @@ router.delete('/:id', (req, res) => {
     res.status(204).end()
 })
 
-router.put('/:id', jsonParser, (req, res)=>{
-    const requiredFields = ['title', 'content', 'author', 'publishDate']
+router.put('/:id', jsonParser, (req, res) => {
+    const requiredFields = ['title', 'content', 'author', 'publishDate', 'id']
     for(let i=0; i<requiredFields.length; i++){
         const field = requiredFields[i]
         if(!(field in req.body)){
@@ -54,12 +54,12 @@ router.put('/:id', jsonParser, (req, res)=>{
         console.log(`Updating blog post \`${req.params.id}\``)
         const updatedBlogPost = BlogPosts.update({
             id: req.params.id,
-            title: req.params.title,
-            content: req.params.content,
-            author: req.params.author,
-            publishDate: req.params.publishDate
+            title: req.body.title,
+            content: req.body.content,
+            author: req.body.author,
+            publishDate: req.body.publishDate
         })
-        res.status(204).json(updatedBlogPost)
+        res.json(updatedBlogPost)
 })
 
 module.exports = router
