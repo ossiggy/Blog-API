@@ -46,7 +46,6 @@ router.put('/:id', jsonParser, (req, res) => {
     }
     
     if(req.params.id !== req.body.id){
-            console.log('here')
             const message = (`Request path id (${req.params.id}) and request body id (${req.body.id}) must match`)
                 console.error(message)
                 return res.status(400).send(message)
