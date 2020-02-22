@@ -1,15 +1,15 @@
-const express = require('express')
-const morgan = require('morgan')
+const express = require('express');
+const morgan = require('morgan');
 
-const app = express()
+const app = express();
 
-const blogPostRouter = require('./blogPostRouter')
+const blogPostRouter = require('./blogPostRouter');
 
-app.use(morgan('common'))
+app.use(morgan('common'));
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
-app.use('/blog-posts', blogPostRouter)
+app.use('/blog-posts', blogPostRouter);
 
 let server
 
